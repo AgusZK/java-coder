@@ -1,69 +1,3 @@
-//SUMA DE PRODUCTOS - COMENTADO POR SI ACASO
-// let producto1;
-// let producto2;
-// let condition = true;
-// let suma = 0;
-
-// do {
-//   suma = 0;
-//   producto1 = "";
-//   producto2 = "";
-//   producto1 = prompt(
-//     "Ingrese el producto que desea comprar (Mouse, Teclado, Monitor)"
-//   ).toLowerCase();
-//   producto2 = prompt(
-//     "Ingrese el producto que desea comprar (Mouse, Teclado, Monitor)"
-//   ).toLowerCase();
-//   if (producto1 === "mouse") {
-//     suma += 8500;
-//   } else if (producto1 === "teclado") {
-//     suma += 12000;
-//   } else if (producto1 === "monitor") {
-//     suma += 50000;
-//   }
-
-//   if (producto2 === "mouse") {
-//     suma += 8500;
-//   } else if (producto2 === "teclado") {
-//     suma += 12000;
-//   } else if (producto2 === "monitor") {
-//     suma += 50000;
-//   }
-//   if (
-//     (producto1 === "mouse" ||
-//       producto1 === "teclado" ||
-//       producto1 === "monitor") &&
-//     (producto2 === "mouse" ||
-//       producto2 === "teclado" ||
-//       producto2 === "monitor")
-//   ) {
-//     condition = false;
-//   }
-// } while (condition === true);
-
-// console.log("El precio total es: $" + suma);
-
-// //SWITCH DE COLORES
-
-// let color = prompt(
-//   "Ingrese el color del producto que desee (Negro, Blanco, Gris)"
-// );
-// color = color.toLowerCase();
-
-// switch (color) {
-//   case "negro":
-//     console.log(`Si, tenemos el color ${color} disponible`);
-//     break;
-//   case "gris":
-//     console.log(`Si, tenemos el color ${color} disponible`);
-//     break;
-//   case "blanco":
-//     console.log(`Si, tenemos el color ${color} disponible`);
-//     break;
-//   default:
-//     alert("Seleccione un color disponible (Negro, Blanco, Gris)");
-// }
-
 //VARIABLES
 const productos = [];
 const IVA = 1.21;
@@ -74,10 +8,11 @@ function crearID() {
 }
 
 class Producto {
-  constructor(id, nombre, precio) {
+  constructor(id, nombre, precio, imagen) {
     this.id = id;
     this.nombre = nombre;
     this.precio = precio;
+    this.imagen = imagen;
   }
   precioFinal() {
     return "$" + parseFloat((this.precio * IVA).toFixed(2));
@@ -89,7 +24,7 @@ function listaDeProductos() {
   productos.push(
     new Producto(crearID(), "MOUSE LOGITECH G PRO WIRELESS", 24000)
   );
-  productos.push(new Producto(crearID(), "TECLADO RAZER HUNSTMAN TKL", 40000));
+  productos.push(new Producto(crearID(), "TECLADO RAZER HUNSTMAN", 40000));
   productos.push(
     new Producto(crearID(), "AURICULARES HYPERX CLOUD FLIGHT", 28000)
   );
@@ -125,4 +60,34 @@ function buscarProducto() {
   );
   console.log("Resultados encontrados a partir de su busqueda:");
   console.table(resultado);
+}
+
+//EVENTOS
+const btnListar = document.getElementById("listar");
+//btnListar.addEventListener("click", verProductos());
+btnListar.addEventListener("click", () => {
+  verProductos();
+});
+
+//AGREGAR AL CARRITO
+let cart = JSON.parse(localStorage.getItem("cartProducts") || "[]");
+
+const botones = document.querySelectorAll(".btn.btn-primary.rounded-pill");
+for (let i = 0; i < botones.length; i++) {
+  botones[i].addEventListener("click", () => {
+    añadirAlCarrito();
+  });
+}
+
+function añadirAlCarrito() {
+  cart.push(
+    new Producto(
+      crearID(),
+      "LOGITECH GPRO SUPERLIGHT",
+      24000,
+      "https://logitechar.vteximg.com.br/arquivos/ids/157821-1000-1000/910-005879.png?v=637481514041530000"
+    )
+  );
+  localStorage.setItem("cartProducts", JSON.stringify(cart));
+  console.log(cart);
 }

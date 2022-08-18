@@ -45,6 +45,12 @@ header {
       }
     }
   }
+  .logo {
+    width: 50px;
+    height: auto;
+    position: relative;
+    float: left;
+  }
   .iconosNav {
     display: flex;
     justify-content: space-between;
@@ -72,4 +78,90 @@ header {
 
 .search {
   display: none;
+}
+
+// CLASES PARA LA CARD
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.divPrecio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card {
+  height: 21rem;
+}
+
+.imgHeight {
+  min-height: 214px;
+  display: flex;
+  align-items: center;
+}
+
+#mousepadAltura {
+  max-height: 214px;
+}
+
+//CARRITO
+.sectionCarrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contentTable {
+  border: solid #324ce4 0.5px;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 1000px;
+  font-weight: 500;
+  thead {
+    text-align: center;
+    tr {
+      color: #324ce4;
+      text-align: unset;
+      padding: 10px 10px;
+      th {
+        padding: 15px 10px;
+      }
+    }
+  }
+
+  #unsetText {
+    padding-left: 40px;
+    text-align: start;
+  }
+  .tableBody {
+    color: #324ce4;
+    width: 20px;
+    height: 30px;
+    padding: 12px 15px;
+    text-align: center;
+    border-top: 1px solid;
+    tr {
+      td {
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+.imgCarrito {
+  width: 20%;
+  padding-top: 10px;
+  padding-left: 5px;
+  height: auto;
+  display: flex;
+  justify-content: start;
+}
+
+.textoCarritoVacio {
+  padding-left: 20px;
+  text-align: start;
 }
