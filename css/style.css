@@ -147,6 +147,38 @@ header .iconosNav a i {
   max-height: 214px;
 }
 
+.headerMiCuenta {
+  background: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 10px;
+}
+
+.headerMiCuenta .logo {
+  width: 50px;
+  height: auto;
+  float: left;
+}
+
+.fondoCuenta {
+  background-image: url(https://wallpaperaccess.com/full/750472.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.divLogIn {
+  background-color: #1f2229;
+}
+
+#colorWhiteCarrito {
+  color: white;
+}
+
 .sectionCarrito {
   display: -webkit-box;
   display: -ms-flexbox;

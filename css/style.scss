@@ -7,6 +7,8 @@
   font-family: "Montserrat", sans-serif;
 }
 
+// HEADER
+
 header {
   background-color: white;
   display: flex;
@@ -65,6 +67,8 @@ header {
   }
 }
 
+// BODY
+
 .textoCuotas {
   background-color: #324ce4;
   justify-content: center;
@@ -106,6 +110,34 @@ header {
 
 #mousepadAltura {
   max-height: 214px;
+}
+
+//MI CUENTA
+.headerMiCuenta {
+  background: no-repeat;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  .logo {
+    width: 50px;
+    height: auto;
+    float: left;
+  }
+}
+
+.fondoCuenta {
+  background-image: url(https://wallpaperaccess.com/full/750472.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.divLogIn {
+  background-color: rgb(31, 34, 41);
+}
+
+#colorWhiteCarrito {
+  color: white;
 }
 
 //CARRITO
