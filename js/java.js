@@ -43,15 +43,6 @@ function verProductos() {
   });
 }
 
-//AGREGAR PRODUCTO SI ES QUE QUIERE (AUNQUE NO ES MI IDEA)
-function agregarProductos() {
-  let id = crearID();
-  let descripcion = prompt("Ingresa el nombre del producto").toUpperCase();
-  let precio = parseInt(prompt("Ingresa el importe sin IVA"));
-  productos.push(new Producto(id, descripcion, precio));
-  console.table(productos);
-}
-
 //FILTRAR PRODUCTO
 function buscarProducto() {
   let prod = prompt("Ingresa el producto que desea buscar:").toUpperCase();
