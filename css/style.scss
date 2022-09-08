@@ -88,7 +88,13 @@ header {
 
 .row {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
+  flex-wrap: wrap;
+  h5 {
+    min-height: 38.4px;
+    max-height: 48px;
+    font-size: 1rem;
+  }
 }
 
 .divPrecio {
@@ -104,12 +110,9 @@ header {
 
 .imgHeight {
   min-height: 214px;
+  max-height: 214px;
   display: flex;
   align-items: center;
-}
-
-#mousepadAltura {
-  max-height: 214px;
 }
 
 //MI CUENTA
@@ -123,6 +126,10 @@ header {
     height: auto;
     float: left;
   }
+}
+
+.hide {
+  display: none;
 }
 
 .fondoCuenta {
@@ -160,7 +167,7 @@ header {
       text-align: unset;
       padding: 10px 10px;
       th {
-        padding: 15px 10px;
+        padding: 20px;
       }
     }
   }

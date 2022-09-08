@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "imagen": "/images/mouse.png",
+    "titulo": "Logitech G PRO SUPERLIGHT",
+    "precio": "$24.000"
+  },
+  {
+    "id": 2,
+    "imagen": "/images/teclado.png",
+    "titulo": "RAZER HUNTSMAN NEGRO",
+    "precio": "$40.000"
+  },
+  {
+    "id": 3,
+    "imagen": "/images/auriculares.png",
+    "titulo": "HYPERX CLOUD FLIGHT",
+    "precio": "$28.000"
+  },
+  {
+    "id": 4,
+    "imagen": "/images/monitor.png",
+    "titulo": "MONITOR ZOWIE XL2430 144HZ",
+    "precio": "$120.000"
+  },
+  {
+    "id": 5,
+    "imagen": "/images/mousepad.png",
+    "titulo": "MOUSEPAD LOGITECH G460",
+    "precio": "$5.000"
+  },
+  {
+    "id": 6,
+    "imagen": "/images/gabinete.png",
+    "titulo": "GABINETE THERMELTAKE H100",
+    "precio": "$173.000"
+  },
+  {
+    "id": 7,
+    "imagen": "/images/rams.png",
+    "titulo": "MEMORIA FURY 16GB DDR4 3600MHZ",
+    "precio": "$18.000"
+  },
+  {
+    "id": 8,
+    "imagen": "/images/cooler.png",
+    "titulo": "COOLER MASTERLIQUID ML240R",
+    "precio": "$42.000"
+  },
+  {
+    "id": 9,
+    "imagen": "/images/procesador.png",
+    "titulo": "PROCESADOR INTEL CORE i9 12900K",
+    "precio": "$113.000"
+  },
+  {
+    "id": 9,
+    "imagen": "/images/placadevideo.png",
+    "titulo": "GRAFICA GIGABYTE RTX 3080TI 12GB DDR6",
+    "precio": "$322.000"
+  },
+  {
+    "id": 9,
+    "imagen": "/images/fuente.png",
+    "titulo": "FUENTE GIGABYTE 700W PLUS BRONCE",
+    "precio": "$113.000"
+  },
+  {
+    "id": 10,
+    "imagen": "/images/notebook.png",
+    "titulo": "LAPTOR LEGION SLIM 7i 7MA GEN 16 PULGADAS",
+    "precio": "$460.000"
+  }
+]

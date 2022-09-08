@@ -109,8 +109,17 @@ header .iconosNav a i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.row h5 {
+  min-height: 38.4px;
+  max-height: 48px;
+  font-size: 1rem;
 }
 
 .divPrecio {
@@ -135,16 +144,13 @@ header .iconosNav a i {
 
 .imgHeight {
   min-height: 214px;
+  max-height: 214px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#mousepadAltura {
-  max-height: 214px;
 }
 
 .headerMiCuenta {
@@ -162,6 +168,10 @@ header .iconosNav a i {
   width: 50px;
   height: auto;
   float: left;
+}
+
+.hide {
+  display: none;
 }
 
 .fondoCuenta {
@@ -214,7 +224,7 @@ header .iconosNav a i {
 }
 
 .contentTable thead tr th {
-  padding: 15px 10px;
+  padding: 20px;
 }
 
 .contentTable #unsetText {

@@ -5,8 +5,8 @@ function loadProduct() {
   cartProducts.forEach((producto) => {
     tableBody.innerHTML += `<tr>
                                 <th><img class="imgCarrito" src=${producto.imagen} alt=""/></th>
-                                <th>${producto.nombre}</th>
-                                <th>$${producto.precio}</th>
+                                <th>${producto.titulo}</th>
+                                <th>${producto.precio}</th>
                             </tr>`;
   });
 }
