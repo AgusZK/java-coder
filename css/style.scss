@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  list-style: none;
 }
 
 // HEADER
@@ -31,11 +32,11 @@ header {
           &::after {
             content: "";
             width: 0%;
-            height: 2px;
+            height: 1.5px;
             background: #324ce4;
             display: block;
             margin: auto;
-            transition: 0.5s;
+            transition: 0.25s;
           }
           &:hover {
             color: #324ce4;
@@ -106,6 +107,15 @@ header {
 
 .card {
   height: 21rem;
+  transition: 0.15s;
+  &:hover {
+    --shadow-color: 0deg 0% 58%;
+    box-shadow: 0.3px 0.9px 1.1px hsl(var(--shadow-color) / 0.29),
+      0.7px 2.4px 2.8px -0.6px hsl(var(--shadow-color) / 0.29),
+      1.3px 4.6px 5.4px -1.2px hsl(var(--shadow-color) / 0.29),
+      2.6px 9.3px 10.9px -1.9px hsl(var(--shadow-color) / 0.29),
+      5px 17.9px 20.9px -2.5px hsl(var(--shadow-color) / 0.29);
+  }
 }
 
 .imgHeight {
@@ -133,7 +143,7 @@ header {
 }
 
 .fondoCuenta {
-  background-image: url(https://wallpaperaccess.com/full/750472.jpg);
+  background-image: url(../images/fondov2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -203,4 +213,55 @@ header {
 .textoCarritoVacio {
   padding-left: 20px;
   text-align: start;
+}
+
+// TACHO DE BASURA Y DE CARRITO VACIO
+.tachoBasura {
+  color: #324ce4;
+  &:hover {
+    color: rgb(221, 51, 51);
+  }
+}
+.fs-1,
+.fa-bag-shopping {
+  color: #324ce4;
+}
+
+// BOTONES DE COOMPRAR, VACIAR Y CERRAR SESION
+.btn1 {
+  height: 40px;
+  width: 150px;
+  border: none;
+  background-color: #0b5ed7;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn1:hover,
+.btn1:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.btn1 {
+  --color: #0b5ed7;
+  --hover: rgb(221, 51, 51);
+}
+
+.btn2 {
+  height: 40px;
+  width: 150px;
+  border: none;
+  background-color: #0b5ed7;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn2:hover,
+.btn2:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.btn2 {
+  --color: #0b5ed7;
+  --hover: rgb(221, 51, 51);
 }

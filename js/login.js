@@ -63,6 +63,7 @@ function hideForm() {
 const logeadito = localStorage.getItem("Correo:");
 const contenedorPerfil = document.getElementById("perfilContenedor");
 
+let compras = JSON.parse(localStorage.getItem("comprasRealizadas") || "0");
 if (localStorage.getItem("Correo:").value !== []) {
   hideForm();
   contenedorPerfil.innerHTML += `<div class="cardProfile p-4">
@@ -73,22 +74,28 @@ if (localStorage.getItem("Correo:").value !== []) {
               <img src="/images/userHombre.png" height="100" width="100" />
             </button>
             <span class="name mt-3">${nombre}</span>
-            <span class="name">${apellido}</span>
+            <span class="name mb-3">${apellido}</span>
             <div
               class="d-flex flex-row justify-content-center align-items-center gap-2"
             >
-              <span class="idd1 mt-3">${logeadito}</span>
+              <span class="idd1 mt-2">${logeadito}</span>
               <span><i class="fa fa-copy cosito"></i></span>
             </div>
             <div
               class="d-flex flex-row justify-content-center align-items-center mt-3"
             >
-              <span class="number"
-                >0 <span class="follow">Compras realizadas</span></span
-              >
+              <span class="number m-2">${compras} </span><span class="follow">Compras realizadas</span></span>
             </div>
+            
+            <div class="px-2 rounded mt-1 date">
+              <span class="join">Se unio Hoy</span>
+            </div>
+                <div class="d-flex mt-5">
+                  <button class="btn1 text-white" id="btnCerrarSesion">Cerrar Sesion</button>
+                </div>
+          </div>
 
-            <div class="text mt-3">
+           <div class="text mt-4">
               <span>
                 Puedes encontrar al creador de esta pagina aqui
               </span>
@@ -105,14 +112,6 @@ if (localStorage.getItem("Correo:").value !== []) {
                 <i class="fa fa-instagram"></i></span>
                 </a>
             </div>
-            
-            <div class="px-2 rounded mt-4 date">
-              <span class="join">Joined Today</span>
-            </div>
-                <div class="d-flex mt-5">
-                  <button class="btn1 text-white" id="btnCerrarSesion">Cerrar Sesion</button>
-                </div>
-          </div>
         </div>
       </div>`;
   let btnCerrarSesion = document.getElementById("btnCerrarSesion");
