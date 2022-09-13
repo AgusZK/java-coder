@@ -71,7 +71,7 @@ if (localStorage.getItem("Correo:").value !== []) {
             class="image d-flex flex-column justify-content-center align-items-center"
           >
             <button class="btn btn-secondary">
-              <img src="/images/userHombre.png" height="100" width="100" />
+              <img src="../images/userHombre.png" height="100" width="100" />
             </button>
             <span class="name mt-3">${nombre}</span>
             <span class="name mb-3">${apellido}</span>
