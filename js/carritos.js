@@ -20,13 +20,14 @@ function loadProduct() {
   tableBody.innerHTML = "";
   cartProducts.forEach((producto) => {
     tableBody.innerHTML += `<tr>
-                                <th><img class="imgCarrito" src=${producto.imagen} alt=""/></th>
+                                <th><img class="imgCarrito" src=../${producto.imagen} alt="${producto.titulo}"/></th>
                                 <th>${producto.titulo}</th>
                                 <th>${producto.precio}</th>
-                                                                <th>
+                                  <th>
                                    <button onclick="cartDelete(${producto.id})"class="btn m-5 p-0 border-0 tachoBasura">
                                    <i class="fa-solid fa-trash"></i>
                                    </button>
+                                  </th>
                                 </th>
                             </tr>`;
   });
