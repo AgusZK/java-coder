@@ -44,7 +44,7 @@ const cargarContenido = async () => {
           <div class="card m-3" style="width: 15rem">
           <div class="imgHeight">
             <img
-              src=${producto.imagen}
+              src="${producto.imagen}"
               class="card-img-top"
               alt="${producto.titulo}"
             />

@@ -20,7 +20,7 @@ function loadProduct() {
   tableBody.innerHTML = "";
   cartProducts.forEach((producto) => {
     tableBody.innerHTML += `<tr>
-                                <th><img class="imgCarrito" src=../${producto.imagen} alt="${producto.titulo}"/></th>
+                                <th><img class="imgCarrito" src="../${producto.imagen}" alt="${producto.titulo}"/></th>
                                 <th>${producto.titulo}</th>
                                 <th>${producto.precio}</th>
                                   <th>
