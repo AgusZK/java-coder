@@ -16,6 +16,10 @@
 //     añadirAlCarrito();
 //   });
 // }
+let formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
 
 //REDIRECT AL LOG IN
 
@@ -52,8 +56,12 @@ const cargarContenido = async () => {
           <div class="card-body p-1">
             <h5 class="card-title">${producto.titulo}</h5>
             <div class="divPrecio">
-              <h6 class="card-subtitle mb-2 text-muted">${producto.precio}</h6>
-              <button onclick="añadirAlCarrito('${producto.imagen}','${producto.titulo}', '${producto.precio}')" href="#" class="btn btn-primary rounded-pill">
+              <h6 class="card-subtitle mb-2 text-muted">${formatter.format(
+                producto.precio
+              )}</h6>
+              <button onclick="añadirAlCarrito('${producto.imagen}','${
+      producto.titulo
+    }', '${producto.precio}')" href="#" class="btn btn-primary rounded-pill">
                 <i class="fa-solid fa-cart-shopping color-white"></i>
               </button>
             </div>

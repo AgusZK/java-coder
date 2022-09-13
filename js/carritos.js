@@ -1,10 +1,15 @@
 let cartProducts = JSON.parse(localStorage.getItem("cartProducts") || "[]");
-
 const tableBody = document.querySelector("#table-body");
 const botonVaciar = document.getElementById("botonVaciar");
 const botonComprar = document.getElementById("botonComprar");
 const carritoVacioEstetica = document.getElementById("carritoVacio");
 const borrarTabla = document.getElementById("borrarTablaCarrito");
+const precioFinal = document.querySelector(".precioFinal");
+
+let formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
 
 // Borrar each producto
 const cartDelete = (productoId) => {
@@ -20,11 +25,15 @@ function loadProduct() {
   tableBody.innerHTML = "";
   cartProducts.forEach((producto) => {
     tableBody.innerHTML += `<tr>
-                                <th><img class="imgCarrito" src="../${producto.imagen}" alt="${producto.titulo}"/></th>
+                                <th><img class="imgCarrito" src="../${
+                                  producto.imagen
+                                }" alt="${producto.titulo}"/></th>
                                 <th>${producto.titulo}</th>
-                                <th>${producto.precio}</th>
+                                <th>${formatter.format(producto.precio)}</th>
                                   <th>
-                                   <button onclick="cartDelete(${producto.id})"class="btn m-5 p-0 border-0 tachoBasura">
+                                   <button onclick="cartDelete(${
+                                     producto.id
+                                   })"class="btn m-5 p-0 border-0 tachoBasura">
                                    <i class="fa-solid fa-trash"></i>
                                    </button>
                                   </th>
@@ -51,10 +60,13 @@ botonComprar.addEventListener("click", () => {
   Swal.fire({
     background: "#1F2229",
     title: "¿Desea comprar estos productos?",
-    html: `<div id="" class= "d-flex justify-content-center flex-direction-column"> 
-            <ul id="listaProductosComprados" class="list-style-none">
-              
+    html: `<div id="" class= "d-flex justify-content-center align-center flex-column"> 
+            <ul id="listaProductosComprados" class="list-style-none"> 
             </ul>
+            <p class="text-white d-flex justify-content-center">
+              Precio final:
+              <span class="precioFinal px-2"></span>
+            </p>
            </div>`,
     icon: "warning",
     showCancelButton: true,
@@ -71,12 +83,18 @@ botonComprar.addEventListener("click", () => {
       localStorage.setItem("comprasRealizadas", JSON.stringify(compras));
     }
   });
+  const precioFinal = document.querySelector(".precioFinal");
+  const calculo = cartProducts.reduce(
+    (acc, producto) => acc + parseInt(producto.precio),
+    0
+  );
+  precioFinal.innerHTML = formatter.format(calculo);
   const listaProductosComprados = document.getElementById(
     "listaProductosComprados"
   );
   cartProducts.forEach((producto) => {
     listaProductosComprados.innerHTML += `
-    <li class= "text-white ">${producto.titulo}</li>
+    <li class= "text-white d-flex justify-content-center">${producto.titulo}</li>
     `;
   });
 });
